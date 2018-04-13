@@ -91,14 +91,12 @@ def get_courses():
     name = sha.hexdigest()
     parse_and_store(FILES_STORE+"full/"+name)
 
-'''
+
 class JSON(scrapy.Item):
     title = scrapy.Field()
     file_urls = scrapy.Field()
     files = scrapy.Field()
-'''
 
-'''
 class GetJson(scrapy.Spider):
     name = 'getjson'
     start_urls = ["https://cas.columbia.edu/cas/login?service=" +
@@ -122,4 +120,3 @@ class GetJson(scrapy.Spider):
 
     def after_login(self, response):
         yield JSON(file_urls=[URL])
-'''
